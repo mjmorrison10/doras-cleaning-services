@@ -1,65 +1,175 @@
-// Dora's Cleaning Services - Interactive Scripts
+/* ============================================
+   DORA'S CLEANING SERVICES — SCRIPTS
+   ============================================ */
 
-const mobileToggle = document.getElementById('mobileToggle');
-const navLinks = document.getElementById('navLinks');
-mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); mobileToggle.classList.toggle('active'); });
-navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); mobileToggle.classList.remove('active'); }); });
+document.addEventListener('DOMContentLoaded', () => {
+    // ===== SCROLL PROGRESS BAR =====
+    const scrollProgress = document.getElementById('scrollProgress');
+    function updateScrollProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        if (scrollProgress) {
+            scrollProgress.style.width = scrollPercent + '%';
+        }
+    }
 
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    function handleNavbarScroll() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+    // ===== OPEN/CLOSED INDICATOR =====
+    const openIndicator = document.getElementById('openIndicator');
+    function updateOpenStatus() {
+        if (!openIndicator) return;
+        const now = new Date();
+        const day = now.getDay(); // 0=Sun, 1=Mon, ...
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const currentTime = hour + minute / 60;
 
-const scrollProgress = document.getElementById('scrollProgress');
-function updateScrollProgress() { const s = window.pageYOffset || document.documentElement.scrollTop; scrollProgress.style.width = (s / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100 + '%'; }
-window.addEventListener('scroll', updateScrollProgress);
+        // Mon-Sat: 7AM-5PM
+        const isOpen = (day >= 1 && day <= 6) && (currentTime >= 7 && currentTime < 17);
 
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 400); });
-backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        const dot = openIndicator.querySelector('.open-dot');
+        const text = openIndicator.querySelector('.open-text');
 
-function animateCounter(el, target, dur) { const st = performance.now(); function up(ct) { const p = Math.min((ct - st) / dur, 1); const ep = 1 - Math.pow(1 - p, 3); el.textContent = (target >= 1000 ? Math.floor(ep * target).toLocaleString() : Math.floor(ep * target)) + '+'; if (p < 1) requestAnimationFrame(up); } requestAnimationFrame(up); }
-function fadeInEl(el) { el.style.opacity = '0'; el.style.transform = 'scale(0.5)'; el.style.transition = 'all 0.6s ease'; requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'scale(1)'; }); }
+        if (isOpen) {
+            openIndicator.classList.add('open');
+            openIndicator.classList.remove('closed');
+            text.textContent = 'Open Now';
+        } else {
+            openIndicator.classList.add('closed');
+            openIndicator.classList.remove('open');
+            text.textContent = 'Closed';
+        }
+    }
 
-const statsObserver = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { const el = entry.target; const c = el.getAttribute('data-count'); if (c !== null) { const t = parseInt(c, 10); if (!isNaN(t) && t > 0) { el.classList.add('counting'); animateCounter(el, t, 2000); } else fadeInEl(el); } statsObserver.unobserve(el); } }); }, { threshold: 0.5 });
-document.querySelectorAll('.stats-number[data-count]').forEach(el => statsObserver.observe(el));
+    // ===== MOBILE MENU =====
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-const obs = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { const p = entry.target.parentElement; const sibs = Array.from(p.children).filter(c => c.classList.contains('service-card') || c.classList.contains('review-card') || c.classList.contains('why-feature') || c.classList.contains('detail-card')); entry.target.style.animationDelay = (sibs.indexOf(entry.target) * 0.1) + 's'; entry.target.classList.add('animate-in'); obs.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('.service-card, .review-card, .why-feature, .detail-card').forEach(el => { el.style.opacity = '0'; obs.observe(el); });
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileMenu.setAttribute('aria-hidden',
+                !mobileMenu.classList.contains('active'));
+            const expanded = mobileToggle.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', expanded);
+        });
 
-const heroContent = document.querySelector('.hero-content');
-window.addEventListener('scroll', () => { const s = window.pageYOffset; const h = document.querySelector('.hero').offsetHeight; if (s < h) heroContent.style.transform = `translateY(${s * 0.3}px)`; });
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
-(function() { const c = document.getElementById('heroParticles'); if (!c) return; for (let i = 0; i < 20; i++) { const p = document.createElement('div'); p.classList.add('hero-particle'); p.style.left = Math.random() * 100 + '%'; p.style.top = Math.random() * 100 + '%'; p.style.animationDelay = Math.random() * 4 + 's'; p.style.animationDuration = (3 + Math.random() * 3) + 's'; const sz = (4 + Math.random() * 6) + 'px'; p.style.width = sz; p.style.height = sz; c.appendChild(p); } })();
+    // ===== BACK TO TOP =====
+    const backToTop = document.getElementById('backToTop');
+    function handleBackToTop() {
+        if (!backToTop) return;
+        if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
-let asi = null;
-function startAS() { const g = document.getElementById('reviewsGrid'); if (!g || window.innerWidth >= 768) return; let d = 1; asi = setInterval(() => { const m = g.scrollWidth - g.clientWidth; if (g.scrollLeft >= m - 2) d = -1; else if (g.scrollLeft <= 2) d = 1; g.scrollLeft += d; }, 30); }
-function stopAS() { if (asi) { clearInterval(asi); asi = null; } }
-const rg = document.getElementById('reviewsGrid');
-if (rg) { rg.addEventListener('touchstart', stopAS); rg.addEventListener('touchend', () => { setTimeout(() => { if (window.innerWidth < 768) startAS(); }, 3000); }); }
-window.addEventListener('resize', () => { if (window.innerWidth < 768) { if (!asi) startAS(); } else stopAS(); }); if (window.innerWidth < 768) startAS();
+    // ===== SCROLL REVEAL =====
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-const contactForm = document.getElementById('contactForm');
-const formFields = contactForm.querySelectorAll('input, select, textarea');
-formFields.forEach(f => { f.addEventListener('input', function() { this.closest('.form-group').classList.toggle('valid', this.value.trim().length > 0); }); f.addEventListener('blur', function() { if (this.hasAttribute('required') && !this.value.trim()) this.closest('.form-group').classList.remove('valid'); }); });
+    revealElements.forEach(el => revealObserver.observe(el));
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); const d = Object.fromEntries(new FormData(this).entries());
-    const subj = encodeURIComponent('Free Estimate Request - Dora\'s Cleaning');
-    const body = encodeURIComponent(`Name: ${d.name}\nPhone: ${d.phone || 'N/A'}\nEmail: ${d.email || 'N/A'}\nCleaning Type: ${d.cleaningtype || 'N/A'}\nHome Size: ${d.homesize || 'N/A'}\nPreferred Date: ${d.preferreddate || 'N/A'}\n\nPlease send me a free estimate.`);
-    window.location.href = `mailto:info@dorascleaning.com?subject=${subj}&body=${body}`;
-    const btn = this.querySelector('button[type="submit"]'); const ot = btn.innerHTML; btn.innerHTML = '&#10003; Estimate Request Sent!'; btn.style.background = '#10b981'; btn.style.borderColor = '#10b981';
-    setTimeout(() => { btn.innerHTML = ot; btn.style.background = ''; btn.style.borderColor = ''; this.reset(); formFields.forEach(f => f.closest('.form-group').classList.remove('valid')); }, 3000);
-});
+    // ===== FORM VALIDATION =====
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
 
-setTimeout(() => { document.querySelectorAll('.hero-ctas .btn').forEach(b => b.classList.add('btn-pulse')); }, 3000);
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
 
-const sections = document.querySelectorAll('section[id]'); const navList = document.querySelectorAll('.nav-links a[data-section]');
-function updateNav() { const sp = window.scrollY + 120; sections.forEach(s => { const t = s.offsetTop; const h = s.offsetHeight; const id = s.id; if (sp >= t && sp < t + h) navList.forEach(l => { l.classList.toggle('active-section', l.getAttribute('data-section') === id); }); }); }
-window.addEventListener('scroll', updateNav); updateNav();
+            // Clear previous errors
+            contactForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+            contactForm.querySelectorAll('.form-error').forEach(e => e.textContent = '');
 
-window.addEventListener('load', () => {
-    ['.hero-badge', '.hero h1', '.hero-sub', '.hero-ctas', '.hero-trust'].forEach((sel, i) => {
-        const el = document.querySelector(sel); if (el) { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; setTimeout(() => { el.style.transition = 'all 0.6s ease'; el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 200 + i * 200); }
-    }); updateScrollProgress();
+            // Name validation
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                showFieldError('name', 'Please enter your name');
+                isValid = false;
+            }
+
+            // Phone validation
+            const phone = document.getElementById('phone');
+            const phoneVal = phone.value.replace(/\D/g, '');
+            if (!phoneVal || phoneVal.length < 7) {
+                showFieldError('phone', 'Please enter a valid phone number');
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailRegex.test(email.value)) {
+                showFieldError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (isValid) {
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('active');
+            }
+        });
+    }
+
+    function showFieldError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorEl = document.getElementById(fieldId + '-error');
+        if (field) field.closest('.form-group').classList.add('error');
+        if (errorEl) errorEl.textContent = message;
+    }
+
+    // ===== COMBINED SCROLL HANDLER =====
+    function onScroll() {
+        updateScrollProgress();
+        handleNavbarScroll();
+        handleBackToTop();
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Initial calls
+    updateScrollProgress();
+    handleNavbarScroll();
+    updateOpenStatus();
+    handleBackToTop();
+
+    // Update open status every minute
+    setInterval(updateOpenStatus, 60000);
 });

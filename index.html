@@ -3,419 +3,730 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dora's Cleaning Services | Trusted Cleaning in Orange, CA</title>
-    <meta name="description" content="Dora's Cleaning Services in Orange, CA. Trusted, affordable residential cleaning, deep cleaning, move-in/move-out and more. FREE estimate on all services. Request a quote online today.">
-    <meta name="keywords" content="cleaning service Orange CA, affordable house cleaning, residential cleaning, deep cleaning, Dora's Cleaning Services">
+    <title>Dora's Cleaning Services | Your Home, Our Care — Trusted Cleaning in Orange, CA</title>
+    <meta name="description" content="Dora's Cleaning Services — Your Home, Our Care. Trusted, bonded & insured residential cleaning in Orange, CA. Deep cleaning, move-in/move-out, recurring service. FREE estimate. Same team every visit.">
+    <meta name="keywords" content="cleaning service Orange CA, trusted house cleaning, residential cleaning, family cleaning, bonded insured cleaning, Dora's Cleaning Services, pet-friendly cleaning">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236b8f71'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='16' fill='%23fefce8'%3ED%3C/text%3E%3C/svg%3E">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dora's Cleaning Services — Your Home, Our Care">
+    <meta property="og:description" content="Trusted, bonded & insured cleaning in Orange, CA. Same team every visit. We treat your home like our own. FREE estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dorascleaning.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Dora's Cleaning Services">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HouseCleaningService",
+        "name": "Dora's Cleaning Services",
+        "description": "Trusted, bonded and insured residential cleaning service in Orange, CA. Deep cleaning, move-in/move-out, recurring service, and more.",
+        "url": "https://dorascleaning.com",
+        "telephone": "+1-714-555-0199",
+        "email": "info@dorascleaning.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Orange",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 33.7873,
+                "longitude": -117.8527
+            },
+            "geoRadius": "20"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "07:00",
+                "closes": "17:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "85",
+            "bestRating": "5"
+        },
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cleaning Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Cleaning"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep Cleaning"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Move-In/Move-Out Cleaning"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recurring Service Plans"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen & Bathroom Sanitizing"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laundry Service"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Organization Help"}}
+            ]
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-bar-left">
-                <span class="top-bar-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    Serving Orange & Surrounding Areas
-                </span>
-            </div>
-            <div class="top-bar-right">
-                <span class="top-bar-item">Mon-Sat: 7AM-5PM</span>
-                <span class="top-bar-item top-bar-cta">
-                    <a href="#contact">FREE Estimate</a>
-                </span>
-            </div>
-        </div>
-    </div>
-
+    <!-- ========================= NAVIGATION ========================= -->
     <nav class="navbar" id="navbar">
         <div class="container nav-inner">
             <a href="#" class="logo">
-                <span class="logo-icon">DC</span>
+                <div class="logo-mark">D</div>
                 <div class="logo-text">
-                    <span class="logo-name">Dora's Cleaning Services</span>
-                    <span class="logo-tagline">Trusted. Affordable. Thorough.</span>
+                    <span class="logo-name">Dora's Cleaning</span>
+                    <span class="logo-tagline">Your Home, Our Care</span>
                 </div>
             </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+
             <ul class="nav-links" id="navLinks">
-                <li><a href="#services" data-section="services">Services</a></li>
-                <li><a href="#why-us" data-section="why-us">Why Us</a></li>
-                <li><a href="#reviews" data-section="reviews">Reviews</a></li>
-                <li><a href="#about" data-section="about">About</a></li>
-                <li><a href="#contact" class="nav-cta" data-section="contact">Get Free Estimate</a></li>
+                <li><a href="#trust">Trust & Safety</a></li>
+                <li><a href="#checklist">What's Included</a></li>
+                <li><a href="#about-dora">Meet Dora</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#families">Families Say</a></li>
+                <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
             </ul>
+
+            <div class="nav-right">
+                <div class="open-indicator" id="openIndicator" aria-live="polite">
+                    <span class="open-dot"></span>
+                    <span class="open-text">Checking...</span>
+                </div>
+                <a href="mailto:info@dorascleaning.com" class="nav-email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    info@dorascleaning.com
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#trust">Trust & Safety</a>
+        <a href="#checklist">What's Included</a>
+        <a href="#about-dora">Meet Dora</a>
+        <a href="#services">Services</a>
+        <a href="#families">Families Say</a>
+        <a href="#contact" class="mobile-menu-cta">Get Free Estimate</a>
+    </div>
+
+    <!-- ========================= 1. WARM WELCOME HERO ========================= -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-particles" id="heroParticles"></div>
-            <div class="hero-badge">Trusted, Affordable Cleaning in Orange, CA</div>
-            <h1>A Clean Home Should Not <span class="highlight">Cost a Fortune.</span></h1>
-            <p class="hero-sub">Dora's Cleaning Services provides thorough, reliable cleaning at prices that make sense for your budget. No hidden fees, no surprise charges. Just honest work and a spotless home, every time.</p>
-            <div class="hero-ctas">
-                <a href="#contact" class="btn btn-primary btn-lg btn-pulse">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Request a Free Estimate
-                </a>
-                <a href="#services" class="btn btn-secondary btn-lg btn-pulse">View Our Services</a>
+        <div class="hero-decoration">
+            <div class="hero-leaf hero-leaf-1"></div>
+            <div class="hero-leaf hero-leaf-2"></div>
+            <div class="hero-leaf hero-leaf-3"></div>
+        </div>
+        <div class="container hero-inner">
+            <div class="hero-content-col">
+                <div class="hero-badge reveal">
+                    <span class="hero-badge-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </span>
+                    Bonded & Insured &bull; Background-Checked Team
+                </div>
+                <h1 class="reveal stagger-1">
+                    We Treat Your Home<br>Like <span class="gold">Our Own.</span>
+                </h1>
+                <p class="hero-sub reveal stagger-2">
+                    Letting someone into your home is a big deal. At Dora's Cleaning, we understand that trust isn't given — it's earned. That's why every team member is background-checked, every visit is consistent, and every home gets the care it deserves. Your family's comfort and safety come first. Always.
+                </p>
+                <div class="hero-ctas reveal stagger-3">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Request a Free Estimate
+                    </a>
+                    <a href="#checklist" class="btn btn-outline btn-lg">See What's Included</a>
+                </div>
+                <div class="hero-pet-badge reveal stagger-4">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2c1.5 2 4 3 6 3-1 4-2 7-2 7H8s-1-3-2-7c2 0 4.5-1 6-3z"/></svg>
+                    Pet-Friendly Cleaning &bull; Safe for Your Furry Family
+                </div>
             </div>
-            <div class="hero-trust">
-                <div class="trust-item">
-                    <div class="trust-score">4.5</div>
-                    <div class="trust-label">Yelp Rating<br><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></div>
+
+            <div class="hero-warm-card reveal stagger-2">
+                <div class="warm-card-header">
+                    <div class="warm-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <div class="warm-card-title">Your Home Deserves Care</div>
+                        <div class="warm-card-subtitle">Not just clean. Cared for.</div>
+                    </div>
                 </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <div class="trust-score">FREE</div>
-                    <div class="trust-label">Estimates on<br>All Services</div>
+                <div class="warm-card-features">
+                    <div class="warm-feature">
+                        <span class="warm-check">&#10003;</span>
+                        <span>Same trusted team every visit</span>
+                    </div>
+                    <div class="warm-feature">
+                        <span class="warm-check">&#10003;</span>
+                        <span>Background-checked & bonded</span>
+                    </div>
+                    <div class="warm-feature">
+                        <span class="warm-check">&#10003;</span>
+                        <span>Pet-safe, eco-friendly products</span>
+                    </div>
+                    <div class="warm-feature">
+                        <span class="warm-check">&#10003;</span>
+                        <span>Flexible scheduling for families</span>
+                    </div>
+                    <div class="warm-feature">
+                        <span class="warm-check">&#10003;</span>
+                        <span>100% satisfaction guarantee</span>
+                    </div>
                 </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <div class="trust-score">100%</div>
-                    <div class="trust-label">Trusted<br>Locally</div>
+                <div class="warm-card-stats">
+                    <div class="warm-stat">
+                        <span class="warm-stat-num">4.5</span>
+                        <span class="warm-stat-label">Yelp Rating</span>
+                    </div>
+                    <div class="warm-stat-divider"></div>
+                    <div class="warm-stat">
+                        <span class="warm-stat-num">400+</span>
+                        <span class="warm-stat-label">Happy Homes</span>
+                    </div>
+                    <div class="warm-stat-divider"></div>
+                    <div class="warm-stat">
+                        <span class="warm-stat-num">FREE</span>
+                        <span class="warm-stat-label">Estimates</span>
+                    </div>
                 </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <div class="trust-score">Low</div>
-                    <div class="trust-label">Affordable<br>Rates</div>
+                <div class="warm-card-urgency">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    FREE estimate on all services — No obligation, no pressure
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="urgency-banner" id="urgency-banner">
+    <!-- ========================= 2. TRUST & SAFETY ========================= -->
+    <section class="trust-section" id="trust">
         <div class="container">
-            <div class="urgency-content">
-                <div class="urgency-text">
-                    <span class="urgency-label">SPECIAL OFFER</span>
-                    <strong>FREE estimate</strong> on all cleaning services. Fill out our form or contact us today. No obligation!
+            <span class="section-tag reveal">Trust & Safety</span>
+            <h2 class="section-heading reveal stagger-1">Your Home Is Personal.<br>Our Standards Match That.</h2>
+            <p class="section-sub reveal stagger-2">We know that inviting someone into your home takes courage. That's why we've built every safeguard to give you complete peace of mind — from who we hire to how we clean.</p>
+
+            <div class="trust-grid">
+                <div class="trust-card reveal stagger-1">
+                    <div class="trust-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Background-Checked</h3>
+                    <p>Every member of our team passes a thorough background check before they ever step foot in your home. No exceptions. We vet like we'd vet someone entering our own home — because we would.</p>
                 </div>
-                <a href="#contact" class="btn btn-white">Get Your Free Estimate</a>
+
+                <div class="trust-card reveal stagger-2">
+                    <div class="trust-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <h3>Bonded & Insured</h3>
+                    <p>Accidents happen — but you'll never pay for one. Dora's Cleaning is fully bonded and insured, protecting your home and belongings against any unexpected mishap. Your protection isn't optional. It's standard.</p>
+                </div>
+
+                <div class="trust-card reveal stagger-3">
+                    <div class="trust-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>Same Team, Every Visit</h3>
+                    <p>Consistency matters. You'll see the same friendly faces each time, not a rotating cast of strangers. Your team learns your home, your preferences, and your pets. That familiarity builds the trust you deserve.</p>
+                </div>
+
+                <div class="trust-card reveal stagger-4">
+                    <div class="trust-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h3>100% Satisfaction Guarantee</h3>
+                    <p>If something isn't right, we come back and make it right — at no extra charge. We're not done until you're completely happy. That's not a policy. It's a promise from Dora herself.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- ========================= 3. CLEANING CHECKLIST VISUAL ========================= -->
+    <section class="checklist-section" id="checklist">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Services</span>
-                <h2>Affordable Cleaning Services<br>For Every Home</h2>
-                <p>Whether you need a one-time deep clean or regular weekly service, Dora's Cleaning has you covered. Every service is thorough, every price is fair, and every customer matters.</p>
+            <div class="checklist-grid">
+                <div class="checklist-content reveal-left">
+                    <span class="section-tag">What's Included</span>
+                    <h2>Every Room.<br>Every Detail. <span class="gold">Every Time.</span></h2>
+                    <p>We don't just "tidy up." We follow a comprehensive checklist for every room in your home so nothing gets missed — not the baseboards, not the light switches, not the spot behind the door you always forget about.</p>
+                    <p>Here's exactly what's included in every standard cleaning:</p>
+
+                    <div class="checklist-rooms">
+                        <div class="checklist-room">
+                            <div class="room-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h4>Kitchen</h4>
+                            </div>
+                            <ul class="room-items">
+                                <li>&#10003; Countertops &amp; backsplash sanitized</li>
+                                <li>&#10003; Sink scrubbed &amp; polished</li>
+                                <li>&#10003; Stovetop &amp; exterior appliances wiped</li>
+                                <li>&#10003; Cabinet fronts cleaned</li>
+                                <li>&#10003; Floor swept &amp; mopped</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-room">
+                            <div class="room-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><path d="M9 6l.463-.536a5 5 0 017.071 7.072L9 20 1.463 12.536a5 5 0 017.071-7.072L9 6z"/></svg>
+                                <h4>Bathroom</h4>
+                            </div>
+                            <ul class="room-items">
+                                <li>&#10003; Tub, shower &amp; tiles scrubbed</li>
+                                <li>&#10003; Toilet sanitized inside &amp; out</li>
+                                <li>&#10003; Sink &amp; mirror polished</li>
+                                <li>&#10003; Counters &amp; fixtures shined</li>
+                                <li>&#10003; Floor sanitized &amp; dried</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-room">
+                            <div class="room-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <h4>Living Areas</h4>
+                            </div>
+                            <ul class="room-items">
+                                <li>&#10003; All surfaces dusted</li>
+                                <li>&#10003; Mirrors &amp; glass cleaned</li>
+                                <li>&#10003; Vacuuming &amp; floor care</li>
+                                <li>&#10003; Cushions fluffed &amp; arranged</li>
+                                <li>&#10003; Baseboards &amp; light switches wiped</li>
+                            </ul>
+                        </div>
+
+                        <div class="checklist-room">
+                            <div class="room-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><path d="M20.38 3.46L16 2 12 3.46 8 2 3.62 3.46a2 2 0 00-1.34 1.88v14.4a1.27 1.27 0 001.52 1.22L8 20l4 1.46L16 20l4.38 1.46a1.27 1.27 0 001.52-1.22V5.34a2 2 0 00-1.52-1.88z"/></svg>
+                                <h4>Bedrooms</h4>
+                            </div>
+                            <ul class="room-items">
+                                <li>&#10003; Bed linens changed (upon request)</li>
+                                <li>&#10003; All surfaces dusted</li>
+                                <li>&#10003; Under-bed vacuuming</li>
+                                <li>&#10003; Closet organization touch-up</li>
+                                <li>&#10003; Mirrors &amp; fixtures cleaned</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-visual reveal-right">
+                    <div class="checklist-house">
+                        <div class="house-icon">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h3>Your Home, Covered</h3>
+                        <p>Every room. Every corner. Every visit.</p>
+                        <div class="house-stats">
+                            <div class="house-stat">
+                                <span class="house-stat-num">42</span>
+                                <span class="house-stat-label">Checklist Items</span>
+                            </div>
+                            <div class="house-stat">
+                                <span class="house-stat-num">4</span>
+                                <span class="house-stat-label">Room Types</span>
+                            </div>
+                            <div class="house-stat">
+                                <span class="house-stat-num">100%</span>
+                                <span class="house-stat-label">Coverage</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Get Your Free Estimate</a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ========================= 4. MEET DORA ========================= -->
+    <section class="meet-dora-section" id="about-dora">
+        <div class="container">
+            <div class="dora-grid">
+                <div class="dora-portrait reveal-left">
+                    <div class="dora-avatar">
+                        <span class="dora-initial">D</span>
+                    </div>
+                    <div class="dora-quote-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ca8a04" opacity="0.3"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                        <p>"I started this business because I believe every family deserves to come home to a clean house — without the stress of cleaning it themselves. Your home is where your life happens. Let me take care of it like it's my own."</p>
+                        <span class="dora-signature">— Dora</span>
+                    </div>
+                </div>
+
+                <div class="dora-content reveal-right">
+                    <span class="section-tag">Meet Dora</span>
+                    <h2>A Neighbor Who Cleans Like She Cares.<br><span class="gold">Because She Does.</span></h2>
+                    <p>Dora started cleaning homes in Orange because she saw something missing: a service that treated people's homes with genuine care, not just efficiency. Too many families were choosing between spending their precious weekends cleaning or living with mess they couldn't keep up with.</p>
+                    <p>That's why Dora built her service around one simple idea: <em>clean like it's your own home, charge like it's your neighbor's</em>. Fair prices, honest work, and the kind of personal attention that makes you feel comfortable letting someone into your most personal space.</p>
+                    <p>Today, Dora's Cleaning has grown through word-of-mouth — the only marketing that matters when trust is your business. Families in Orange recommend Dora to other families because they know: when Dora's team shows up, they show up with care.</p>
+
+                    <div class="dora-values">
+                        <div class="dora-value">
+                            <div class="dora-value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Care First</strong>
+                                <span>We clean like we're cleaning for family — because to us, you are.</span>
+                            </div>
+                        </div>
+                        <div class="dora-value">
+                            <div class="dora-value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Trust Built Over Time</strong>
+                                <span>Same team, same faces, same care. Consistency that earns your confidence.</span>
+                            </div>
+                        </div>
+                        <div class="dora-value">
+                            <div class="dora-value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div>
+                                <strong>Honest, Fair Pricing</strong>
+                                <span>No hidden fees. No surprise charges. Just straightforward, fair pricing.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= 5. SERVICES ========================= -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <span class="section-tag reveal">Our Services</span>
+            <h2 class="section-heading reveal stagger-1">Cleaning That Fits<br>Your Family's Life</h2>
+            <p class="section-sub reveal stagger-2">Whether you need a one-time deep clean or regular weekly service, we have a plan that works for your home and your budget. Every service comes with our satisfaction guarantee.</p>
+
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal stagger-1">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     </div>
                     <h3>Residential Cleaning</h3>
-                    <p>Complete home cleaning tailored to your needs. Kitchens, bathrooms, bedrooms, living areas. We follow a detailed checklist so nothing gets missed. Your home, only cleaner.</p>
+                    <p>Your complete home cleaning, tailored to how you live. Kitchens, bathrooms, bedrooms, living areas — all covered by our detailed checklist.</p>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card reveal stagger-2">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     </div>
                     <h3>Deep Cleaning</h3>
-                    <p>When regular cleaning is not enough. We tackle built-up grime, neglected areas, and hard-to-reach spots. Baseboards, behind appliances, inside cabinets. A true deep clean.</p>
+                    <p>When regular cleaning isn't enough. We tackle built-up grime, neglected areas, and hard-to-reach spots. Baseboards, behind appliances, inside cabinets — a true deep clean.</p>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card reveal stagger-3">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    </div>
-                    <h3>Move-In/Move-Out</h3>
-                    <p>Moving? Let us handle the cleaning so you can focus on the move. We make sure every room is spotless for the next occupant or ready for you to move in fresh.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>Recurring Service Plans</h3>
-                    <p>Weekly, bi-weekly, or monthly cleaning at discounted rates. Consistent, reliable service from the same team every visit. Your home stays clean without you lifting a finger.</p>
+                    <p>Weekly, bi-weekly, or monthly cleaning at discounted rates. Same team, same care, every visit. Your home stays clean without you lifting a finger.</p>
+                    <span class="service-badge">Most Popular</span>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card reveal stagger-4">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                     </div>
-                    <h3>Kitchen & Bathroom Sanitizing</h3>
-                    <p>The two rooms that need the most attention. We sanitize countertops, sinks, tubs, showers, and toilets. Remove soap scum, hard water stains, and bacteria. Fresh and clean.</p>
+                    <h3>Move-In/Move-Out</h3>
+                    <p>Moving is stressful enough. We handle the cleaning so you get your full deposit back or walk into a spotless new home. Every room, guaranteed.</p>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card reveal stagger-5">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
                     </div>
-                    <h3>Dusting & Vacuuming</h3>
-                    <p>Comprehensive dusting of all surfaces, furniture, and fixtures. Thorough vacuuming of carpets, rugs, and hard floors. We even dust the places you forget about.</p>
+                    <h3>Kitchen & Bath Sanitizing</h3>
+                    <p>The two rooms that need the most attention. We sanitize countertops, sinks, tubs, showers, and toilets — remove bacteria, soap scum, and hard water stains.</p>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card reveal stagger-6">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.38 3.46L16 2 12 3.46 8 2 3.62 3.46a2 2 0 00-1.34 1.88v14.4a1.27 1.27 0 001.52 1.22L8 20l4 1.46L16 20l4.38 1.46a1.27 1.27 0 001.52-1.22V5.34a2 2 0 00-1.52-1.88z"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M20.38 3.46L16 2 12 3.46 8 2 3.62 3.46a2 2 0 00-1.34 1.88v14.4a1.27 1.27 0 001.52 1.22L8 20l4 1.46L16 20l4.38 1.46a1.27 1.27 0 001.52-1.22V5.34a2 2 0 00-1.52-1.88z"/></svg>
                     </div>
-                    <h3>Laundry Service</h3>
-                    <p>Washing, drying, and folding laundry so you do not have to. Bed linens, towels, and everyday clothing. Spend your weekends doing things you enjoy instead of laundry.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                    </div>
-                    <h3>Organization Help</h3>
-                    <p>Need help getting your home in order? We assist with organizing closets, pantries, garages, and living spaces. A tidy home is a peaceful home. Let us help you get there.</p>
+                    <h3>Laundry & Organization</h3>
+                    <p>Washing, drying, and folding so you don't have to. Plus help organizing closets, pantries, and living spaces. Spend weekends on things you enjoy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="why-us" id="why-us">
+    <!-- ========================= 6. FLEXIBLE SCHEDULING ========================= -->
+    <section class="scheduling-section" id="scheduling">
         <div class="container">
-            <div class="why-us-grid">
-                <div class="why-us-content">
-                    <span class="section-tag">Why Dora's Cleaning?</span>
-                    <h2>Trusted Locally. Affordable Always. Thorough Every Time.</h2>
-                    <p>Dora's Cleaning Services was built on a simple belief: everyone deserves a clean home at a fair price. We are not the cheapest because we cut corners. We are affordable because we believe honest pricing builds lasting relationships with our customers.</p>
-                    <div class="why-features">
-                        <div class="why-feature">
-                            <div class="why-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div class="schedule-grid">
+                <div class="schedule-content reveal-left">
+                    <span class="section-tag">Flexible Scheduling</span>
+                    <h2>Cleaning That Works<br>Around <span class="gold">Your Schedule</span></h2>
+                    <p>You're busy. We get it. Between work, kids, pets, and life, finding time for cleaning shouldn't be another stress on your plate. That's why Dora's Cleaning offers scheduling that works around you — not the other way around.</p>
+
+                    <div class="schedule-options">
+                        <div class="schedule-option">
+                            <div class="schedule-option-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             </div>
                             <div>
-                                <strong>Trusted by the Community</strong>
-                                <p>Our reputation in Orange has been built one satisfied customer at a time. We are the cleaning service your neighbors recommend. That trust is something we earn with every visit.</p>
+                                <strong>Weekly Service</strong>
+                                <p>Keep your home consistently clean. Best for busy families with kids and pets.</p>
                             </div>
                         </div>
-                        <div class="why-feature">
-                            <div class="why-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div class="schedule-option">
+                            <div class="schedule-option-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             </div>
                             <div>
-                                <strong>Affordable Rates</strong>
-                                <p>Cleaning should not be a luxury. Our pricing is straightforward and competitive. No hidden fees, no surprise charges. You know exactly what you will pay before we start.</p>
+                                <strong>Bi-Weekly Service</strong>
+                                <p>Our most popular option. Great balance of cleanliness and budget.</p>
                             </div>
                         </div>
-                        <div class="why-feature">
-                            <div class="why-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div class="schedule-option">
+                            <div class="schedule-option-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             </div>
                             <div>
-                                <strong>Thorough Attention to Detail</strong>
-                                <p>We clean like it is our own home. That means we do not skip corners, rush through rooms, or leave things half done. Every visit meets our high standards.</p>
+                                <strong>Monthly Service</strong>
+                                <p>Perfect for maintaining a baseline of cleanliness between your own touch-ups.</p>
                             </div>
                         </div>
-                        <div class="why-feature">
-                            <div class="why-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div class="schedule-option">
+                            <div class="schedule-option-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                             </div>
                             <div>
-                                <strong>FREE Estimates</strong>
-                                <p>We provide free, no-obligation estimates on all our services. Just fill out our contact form or send us a message. We will get back to you quickly with a fair quote.</p>
+                                <strong>One-Time Deep Clean</strong>
+                                <p>For move-outs, seasonal deep cleans, or whenever you need a fresh start.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="why-us-visual">
-                    <div class="stats-card">
-                        <div class="stats-number" data-count="400">400+</div>
-                        <div class="stats-label">Happy Homes</div>
-                        <div class="stats-divider"></div>
-                        <div class="stats-number" data-count="8">8</div>
-                        <div class="stats-label">Service Types</div>
-                        <div class="stats-divider"></div>
-                        <div class="stats-number">FREE</div>
-                        <div class="stats-label">Estimates Always</div>
-                        <div class="stats-divider"></div>
-                        <div class="stats-number">100%</div>
-                        <div class="stats-label">Satisfaction Focus</div>
+
+                <div class="schedule-visual reveal-right">
+                    <div class="schedule-card">
+                        <div class="schedule-card-header">
+                            <h3>Hours That Work For You</h3>
+                            <p>We show up on time, every time.</p>
+                        </div>
+                        <div class="schedule-hours">
+                            <div class="schedule-hours-row">
+                                <span class="day">Monday — Saturday</span>
+                                <span class="time">7:00 AM — 5:00 PM</span>
+                            </div>
+                            <div class="schedule-hours-row closed">
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card-features">
+                            <div class="scf-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Early morning availability</span>
+                            </div>
+                            <div class="scf-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Saturday appointments</span>
+                            </div>
+                            <div class="scf-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Same-day callbacks</span>
+                            </div>
+                            <div class="scf-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Easy online scheduling</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials" id="reviews">
+    <!-- ========================= 7. WHAT OUR FAMILIES SAY ========================= -->
+    <section class="families-section" id="families">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Customer Reviews</span>
-                <h2>See Why Orange Trusts<br>Dora's Cleaning</h2>
-                <p>Real reviews from homeowners who rely on Dora's Cleaning. Affordable, thorough, and trusted by the community.</p>
-            </div>
-            <div class="reviews-grid" id="reviewsGrid">
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"Dora's Cleaning is the best cleaning service I have ever used. They are thorough, reliable, and the prices are so reasonable. I have them come every two weeks and my house has never looked better."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">Y</div>
+            <span class="section-tag reveal">What Our Families Say</span>
+            <h2 class="section-heading reveal stagger-1">Real Homes. Real Families.<br><span class="gold">Real Trust.</span></h2>
+            <p class="section-sub reveal stagger-2">These aren't just reviews — they're relationships. Families in Orange trust Dora's Cleaning because we've earned it, one clean home at a time.</p>
+
+            <div class="families-grid">
+                <div class="family-card reveal stagger-1">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"Dora's Cleaning is the best cleaning service I have ever used. They are thorough, reliable, and the prices are so reasonable. I have them come every two weeks and my house has never looked better. I actually trust them in my home — that says everything."</p>
+                    <div class="family-author">
+                        <div class="family-avatar">Y</div>
                         <div>
                             <strong>Yelp Verified Review</strong>
                             <span>Featured Review on Yelp</span>
                         </div>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"I was on a tight budget and thought I could not afford a cleaning service. Dora's proved me wrong. Their rates are incredibly fair and the quality is outstanding. Best value in Orange."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">A</div>
+
+                <div class="family-card reveal stagger-2">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"I was on a tight budget and thought I couldn't afford a cleaning service. Dora's proved me wrong. Their rates are incredibly fair and the quality is outstanding. Best value in Orange. And they're so kind to my dog!"</p>
+                    <div class="family-author">
+                        <div class="family-avatar">A</div>
                         <div>
                             <strong>Amanda L.</strong>
-                            <span>Verified Customer Review</span>
+                            <span>Verified Customer &bull; Pet Owner</span>
                         </div>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"They deep cleaned my apartment before I moved out and it looked better than when I moved in. Got my full deposit back. The attention to detail is really impressive."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">Y</div>
+
+                <div class="family-card reveal stagger-3">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"They deep cleaned my apartment before I moved out and it looked better than when I moved in. Got my full deposit back. The attention to detail is really impressive — they even cleaned the tops of the door frames."</p>
+                    <div class="family-author">
+                        <div class="family-avatar">Y</div>
                         <div>
                             <strong>Yelp Verified Review</strong>
                             <span>5-Star Review</span>
                         </div>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"I requested a free estimate online and got a response the same day. The quote was fair, the cleaning was thorough, and I signed up for recurring service. Dora's is the real deal."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">C</div>
+
+                <div class="family-card reveal stagger-4">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"Same team every time. They know my home, they know my preferences, they even know where I keep the treats for my cat. That consistency is worth more than any discount. Dora's is the real deal."</p>
+                    <div class="family-author">
+                        <div class="family-avatar">C</div>
                         <div>
                             <strong>Carlos M.</strong>
-                            <span>Verified Customer Review</span>
+                            <span>Verified Customer &bull; Recurring Service</span>
                         </div>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"The laundry service is such a lifesaver. I work long hours and coming home to clean, folded laundry is amazing. They even organized my closet. Above and beyond every time."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">R</div>
+
+                <div class="family-card reveal stagger-5">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"The laundry service is such a lifesaver. I work long hours and coming home to clean, folded laundry is amazing. They even organized my closet. Above and beyond every time. I've recommended Dora's to all my friends."</p>
+                    <div class="family-author">
+                        <div class="family-avatar">R</div>
                         <div>
                             <strong>Rosa P.</strong>
-                            <span>Verified Customer Review</span>
+                            <span>Verified Customer &bull; Working Mom</span>
                         </div>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-text">"Honest, hardworking, and affordable. Dora's Cleaning is exactly what I was looking for. No upselling, no hidden fees. Just great cleaning at a fair price. Highly recommend to anyone in Orange."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">J</div>
+
+                <div class="family-card reveal stagger-6">
+                    <div class="family-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="family-text">"Honest, hardworking, and affordable. Dora's Cleaning is exactly what I was looking for. No upselling, no hidden fees. Just great cleaning at a fair price. My family has been using them for two years and wouldn't switch."</p>
+                    <div class="family-author">
+                        <div class="family-avatar">J</div>
                         <div>
                             <strong>Jason T.</strong>
-                            <span>Verified Customer Review</span>
+                            <span>Verified Customer &bull; Family of Four</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="reviews-cta">
-                <p>Ready for a cleaner home? Request your free estimate today.</p>
-                <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
-            </div>
         </div>
     </section>
 
-    <section class="about" id="about">
+    <!-- ========================= 8. CTA SECTION ========================= -->
+    <section class="cta-section" id="cta">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="section-tag">About Dora's Cleaning</span>
-                    <h2>Clean Homes. Fair Prices.<br>Honest Work.</h2>
-                    <p>Dora's Cleaning Services started with a simple mission: provide the Orange community with reliable, thorough cleaning at prices real people can afford. We are not a big franchise with big overhead. We are local, personal, and committed to doing right by our customers.</p>
-                    <p>Every member of our team takes pride in their work. We clean like we are cleaning our own homes because we treat every customer like family. That means no cutting corners, no rushing, and no excuses. Just consistently excellent results.</p>
-                    <p>We offer free estimates because we believe you should know exactly what you will pay before you commit. Fill out our contact form, tell us about your home, and we will get you a fair, transparent quote quickly.</p>
-                    <div class="trust-badges">
-                        <span class="trust-badge">Trusted Locally</span>
-                        <span class="trust-badge">Affordable Rates</span>
-                        <span class="trust-badge">Thorough Cleaning</span>
-                        <span class="trust-badge">Free Estimates</span>
-                    </div>
-                </div>
-                <div class="about-details">
-                    <div class="detail-card">
-                        <h4>Community Focused</h4>
-                        <p>We live and work in Orange. Our customers are our neighbors, and we treat them that way. Your satisfaction is our reputation, and we take that seriously.</p>
-                    </div>
-                    <div class="detail-card">
-                        <h4>No Hidden Fees</h4>
-                        <p>The price we quote is the price you pay. No surprise charges, no last-minute add-ons. Transparent pricing is not a gimmick. It is how we do business.</p>
-                    </div>
-                    <div class="detail-card">
-                        <h4>Flexible Scheduling</h4>
-                        <p>We work around your schedule, not the other way around. Early mornings, weekdays, or weekends. We find a time that works for you and show up on time, every time.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section" id="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>A Clean Home Is Waiting.<br>Get Your FREE Estimate Now.</h2>
-                <p>Stop putting off cleaning. Dora's makes it easy and affordable. Fill out our form and get a free, no-obligation quote within hours. A cleaner home is just one click away.</p>
+            <div class="cta-inner reveal">
+                <h2>A Clean Home Is Waiting.<br>Let Us Take Care of It.</h2>
+                <p>Stop spending your weekends cleaning. Dora's makes it easy and affordable. Fill out our form and get a free, no-obligation quote within hours. Your home deserves the care we give.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary btn-lg btn-pulse">
+                    <a href="#contact" class="btn btn-primary btn-lg">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         Request a Free Estimate
                     </a>
-                    <a href="#services" class="btn btn-secondary btn-lg btn-pulse">View Our Services</a>
+                    <a href="#services" class="btn btn-outline btn-lg">View Our Services</a>
                 </div>
-                <p class="cta-note"><strong>FREE estimate</strong> on all cleaning services!</p>
+                <p class="cta-note"><strong>FREE estimate</strong> on all cleaning services &bull; No obligation</p>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- ========================= 9. CONTACT ========================= -->
+    <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-info reveal-left">
                     <span class="section-tag">Get In Touch</span>
                     <h2>Request Your Free Estimate</h2>
-                    <p>Tell us about your home and what you need. We will get back to you with a fair, transparent quote within hours. No obligation, no pressure, just honest pricing.</p>
+                    <p>Tell us about your home and what you need. We'll get back to you with a fair, transparent quote within hours. No obligation, no pressure — just honest pricing from a neighbor who cares.</p>
+
                     <div class="contact-details">
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <div>
+                            <div class="contact-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-item-text">
                                 <strong>Email</strong>
                                 <a href="mailto:info@dorascleaning.com">info@dorascleaning.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <div>
+                            <div class="contact-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-item-text">
                                 <strong>Service Area</strong>
                                 <span>Orange & Surrounding<br>Orange County Areas</span>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                            <div>
+                            <div class="contact-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="contact-item-text">
                                 <strong>Hours</strong>
-                                <span>Mon-Sat: 7:00 AM - 5:00 PM<br>Sunday: Closed</span>
+                                <span>Mon-Sat: 7:00 AM — 5:00 PM<br>Sunday: Closed</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.2!2d-117.8527!3d33.7873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9a5741234%3A0x5678!2sOrange+CA!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dora's Cleaning Services - Orange, CA Service Area"></iframe>
+                    </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <h3>Request a Free Estimate</h3>
+
+                <div class="contact-form-wrapper reveal-right">
+                    <h3>Request a Free Estimate</h3>
+                    <form class="contact-form" id="contactForm" novalidate>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
+                                <label for="name">Full Name <span class="required">*</span></label>
                                 <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                                <span class="form-error" id="name-error"></span>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone *</label>
+                                <label for="phone">Phone <span class="required">*</span></label>
                                 <input type="tel" id="phone" name="phone" required placeholder="(714) 555-0000">
+                                <span class="form-error" id="phone-error"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Email <span class="required">*</span></label>
                             <input type="email" id="email" name="email" required placeholder="jane@email.com">
+                            <span class="form-error" id="email-error"></span>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -427,7 +738,6 @@
                                     <option value="move">Move-In/Move-Out</option>
                                     <option value="recurring">Recurring Service Plan</option>
                                     <option value="kitchenbath">Kitchen & Bathroom</option>
-                                    <option value="dusting">Dusting & Vacuuming</option>
                                     <option value="laundry">Laundry Service</option>
                                     <option value="organization">Organization Help</option>
                                 </select>
@@ -440,45 +750,50 @@
                                     <option value="2br">2 Bedroom</option>
                                     <option value="3br">3 Bedroom</option>
                                     <option value="4br">4+ Bedroom</option>
-                                    <option value="other">Other</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="preferreddate">Preferred Date</label>
-                            <input type="date" id="preferreddate" name="preferreddate">
+                            <label for="message">Tell Us About Your Home</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any special requests, pets, or preferences?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Get My Free Estimate</button>
-                        <p class="form-note">We will respond within a few hours during business hours.</p>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">Get My Free Estimate</button>
+                        <p class="form-note">We'll respond within a few hours during business hours.</p>
                     </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h4>Thank You!</h4>
+                        <p>Your estimate request has been received. We'll get back to you within a few hours during business hours.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.2!2d-117.8527!3d33.7873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9a5741234%3A0x5678!2sOrange+CA!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
+    <!-- ========================= 10. FOOTER ========================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">DC</span>
+                    <a href="#" class="logo">
+                        <div class="logo-mark">D</div>
                         <div class="logo-text">
-                            <span class="logo-name">Dora's Cleaning Services</span>
-                            <span class="logo-tagline">Trusted. Affordable. Thorough.</span>
+                            <span class="logo-name">Dora's Cleaning</span>
+                            <span class="logo-tagline">Your Home, Our Care</span>
                         </div>
-                    </div>
-                    <p>Trusted, affordable cleaning services in Orange and surrounding areas. Free estimates on all services. Honest pricing, thorough cleaning, every time.</p>
+                    </a>
+                    <p>Trusted, bonded & insured cleaning services in Orange and surrounding areas. Free estimates. Honest pricing. Same team every visit.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="#trust">Trust & Safety</a></li>
+                        <li><a href="#checklist">What's Included</a></li>
+                        <li><a href="#about-dora">Meet Dora</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#why-us">Why Dora's</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#families">Reviews</a></li>
                         <li><a href="#contact">Free Estimate</a></li>
                     </ul>
                 </div>
@@ -488,15 +803,20 @@
                         <li><a href="#services">Residential Cleaning</a></li>
                         <li><a href="#services">Deep Cleaning</a></li>
                         <li><a href="#services">Move-In/Move-Out</a></li>
+                        <li><a href="#services">Recurring Plans</a></li>
                         <li><a href="#services">Laundry Service</a></li>
-                        <li><a href="#services">Organization</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Us</h4>
+                    <h4>Contact</h4>
                     <p><a href="mailto:info@dorascleaning.com">info@dorascleaning.com</a></p>
                     <p>Serving Orange &<br>Surrounding Areas</p>
-                    <p>Mon-Sat: 7AM - 5PM</p>
+                    <p>Mon-Sat: 7AM — 5PM</p>
+                    <div class="footer-trust-badges">
+                        <span class="ft-badge">Bonded</span>
+                        <span class="ft-badge">Insured</span>
+                        <span class="ft-badge">Background-Checked</span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -505,14 +825,10 @@
         </div>
     </footer>
 
-    <div class="mobile-cta" id="mobileCta">
-        <a href="#contact" class="btn btn-primary btn-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Get a Free Estimate
-        </a>
-    </div>
-
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
